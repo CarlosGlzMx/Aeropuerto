@@ -4,9 +4,11 @@
 #include "airline.h"
 #include "flight.h"
 #include "passnger.h"
+#include "room.h"
 using namespace std;
 
 const int NUMBER_OF_AIRLINES = 3;
+const int NUMBER_OF_ROOMS = 10;
 
 class Airport{
     private:
@@ -17,6 +19,7 @@ class Airport{
         int totalTransactions;
         float totalDailyIncome;
         Airline airlines[NUMBER_OF_AIRLINES];
+        Room rooms[NUMBER_OF_ROOMS];
     public:
         Airport();
         Airport(string);
@@ -27,6 +30,7 @@ class Airport{
         void programFlightFromAirline();
         void showAllIncomes();
         void updateAnAirline();
+        void nightSystem();
         //Getters
         string getId();
         string getDate();

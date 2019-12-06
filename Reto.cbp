@@ -43,6 +43,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="passnger.cpp" />
 		<Unit filename="passnger.h" />
+		<Unit filename="room.cpp" />
+		<Unit filename="room.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

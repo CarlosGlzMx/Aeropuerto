@@ -125,6 +125,74 @@ void Airport::closeOperations(){
     cout << "Durante el dia hubieron un total de: " << totalTransactions << " vuelos." << endl;
     cout << "Generando un ingreso total a las aerlineas de: " << totalDailyIncome << endl;
 }
+void Airport::nightSystem(){
+    string respuestaHabitaciones;
+    cout << "Sistema de habitaciones del aeropuerto" << endl;
+    cout << "Selecciona una opcion: " << endl;
+    cout << "1.Reservar habitacion" << endl;
+    cout << "2.Cancelar habitacion" << endl;
+    cin >> respuestaHabitaciones;
+    while(respuestaHabitaciones != "1" && respuestaHabitaciones != "2"){
+        cout << "Ingresa una opcion valida:" << endl;
+        cin >> respuestaHabitaciones;
+    }
+    if(respuestaHabitaciones == "1"){
+        bool habitacionLibre = false;
+        int iHabitacionLibre;
+        for(int i = 0; i < NUMBER_OF_ROOMS; i++){
+            if(rooms[i].getGuestName() == ""){
+                habitacionLibre = true;
+                iHabitacionLibre = i;
+            }
+        }
+        if(habitacionLibre){
+                cout << "Hay una habitacion libre" << endl;
+                cout << "Ingrese el nombre a registrar en la reservacion: ";
+                string tempGN;
+                cin >> tempGN;
+                cout << "Ingrese una contrasena para accesar a la reservacion: ";
+                string tempGP;
+                cin >> tempGP;
+                rooms[iHabitacionLibre].setGuestName(tempGN);
+                rooms[iHabitacionLibre].setGuestPassword(tempGP);
+                cout << "Reservacion exitosa" << endl;
+        }
+        else{
+            cout << "No hay habitaciones disponibles" << endl;
+        }
+    }
+    else{
+        cout << "Cancelacion de habitaciones" << endl;
+        cout << "Ingrese el nombre exacto de la reservacion a cancelar: ";
+        string tempNameCancel;
+        cin >> tempNameCancel;
+        bool coincidencia = false;
+        int cuartoBuscado;
+        for(int i = 0; i < NUMBER_OF_ROOMS; i++){
+            if(rooms[i].getGuestName() == tempNameCancel){
+                coincidencia = true;
+                cuartoBuscado = i;
+
+            }
+        }
+        if(coincidencia){
+            cout << "Usuario encontrado, ingrese su contrasena: ";
+            string tempPassCancel;
+            cin >> tempPassCancel;
+            if(rooms[cuartoBuscado].getGuestPassword() == tempPassCancel){
+                cout << "Cancelacion exitosa" << endl;
+                rooms[cuartoBuscado].setGuestName("");
+                rooms[cuartoBuscado].setGuestPassword("");
+            }
+            else{
+                cout << "Contrasena incorrecta, cancelacion abortada" << endl;
+            }
+        }
+        else{
+            cout << "No hay informacion que coincida, no se puede cancelar" << endl;
+        }
+    }
+}
 
 //Getters
 string Airport::getId(){

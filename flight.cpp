@@ -36,7 +36,7 @@ void Flight::setPassenger(int fila, int columna){
         string respuesta = "";
         cout << "Quieres agregar infomacion personal? ";
         cin >> respuesta;
-        if(respuesta == "si"){
+        if(respuesta == "si" || respuesta == "SI" || respuesta == "Si"){
             cout << "Ingresa el nombre que llevara la reservacion: ";
             string cinName = "ocupado";
             cin >> cinName;

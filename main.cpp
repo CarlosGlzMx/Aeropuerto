@@ -14,13 +14,14 @@ int main()
     cin >> fecha;
     Airport AICM(fecha);
     string menu = "";
-    while(menu != "5"){
+    while(menu != "6"){
         cout << "Que deseas hacer con el sistema de aeropuertos?" << endl;
         cout << "1.Programar vuelos y reservar pasajeros" << endl;
         cout << "2.Mostrar todos los vuelos programados" << endl;
         cout << "3.Mostrar los ingresos de las aerolineas" << endl;
         cout << "4.Actualizar informacion de aerolinea" << endl;
-        cout << "5.Cerrar sistema" << endl;
+        cout << "5.Ingresar al sistema de habitaciones" << endl;
+        cout << "6.Cerrar sistema" << endl;
         cin >> menu;
         cout << "----------------------------------" << endl;
         if(menu == "1"){
@@ -36,6 +37,9 @@ int main()
             AICM.updateAnAirline();
         }
         else if(menu == "5"){
+            AICM.nightSystem();
+        }
+        else if(menu == "6"){
             AICM.closeOperations();
         }
         else{

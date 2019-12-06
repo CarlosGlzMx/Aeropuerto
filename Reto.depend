@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1575596743 source:c:\progra\reto\airport.cpp
+	<iostream>
+	<sstream>
+	"airport.h"
+
+1575052322 c:\progra\reto\airport.h
+	<iostream>
+	"airline.h"
+	"flight.h"
+	"passnger.h"
+
+1575596517 c:\progra\reto\airline.h
+	<iostream>
+	"flight.h"
+	"passnger.h"
+
+1575594537 c:\progra\reto\flight.h
+	<iostream>
+	"passnger.h"
+	"hora.h"
+
+1575005701 c:\progra\reto\passnger.h
+	<iostream>
+
+1575594567 c:\progra\reto\hora.h
+	<iostream>
+
+1575594354 source:c:\progra\reto\flight.cpp
+	<iostream>
+	"flight.h"
+
+1575054754 source:c:\progra\reto\main.cpp
+	<iostream>
+	"airline.h"
+	"airport.h"
+	"flight.h"
+	"passnger.h"
+
+1575005236 source:c:\progra\reto\passnger.cpp
+	<iostream>
+	"passnger.h"
+
+1575595963 source:c:\progra\reto\airline.cpp
+	<iostream>
+	"airline.h"
+
+1575595830 source:c:\progra\reto\hora.cpp
+	<iostream>
+	<sstream>
+	"hora.h"
+	<cstdlib>
+

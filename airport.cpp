@@ -66,10 +66,15 @@ void Airport::programFlightFromAirline(){
 }
 void Airport::showAllIncomes(){
     cout << "Los ingresos de las aerolineas el " << date << " han sido:" << endl;
+    bool faltanAerolineas = true;
     for(int i = 0; i < NUMBER_OF_AIRLINES; i++){
         if(airlines[i].getName() != ""){
+            faltanAerolineas = false;
             cout << airlines[i].getName() << ": " << airlines[i].getIncomes() << endl;
         }
+    }
+    if(faltanAerolineas){
+        cout << "No se presentaron aerolineas" << endl;
     }
 }
 void Airport::updateAnAirline(){
@@ -84,17 +89,25 @@ void Airport::updateAnAirline(){
         }
     }
     cin >> numAirline;
+    while(numAirline > 3 || numAirline < 1){
+        cout << "Ingresa una opcion valida" << endl;
+        cin >> numAirline;
+    }
     numAirline = numAirline - 1;
     airlines[numAirline].updateAirline();
     cout << "Actualizacion exitosa" << endl;
 }
 void Airport::printAllFilghts(){
     cout << "Los vuelos programados para: " << date << " son:" << endl;
+    bool faltaDeVuelos = true;
+    bool faltaDeAerolinea = true;
     for(int i = 0; i < NUMBER_OF_AIRLINES; i++){
         if(airlines[i].getName() != ""){
+            faltaDeAerolinea = false;
             cout << airlines[i].getName() << ":" << endl;
             for(int j = 0; j < NUMBER_OF_FLIGHTS; j++){
                 if(airlines[i].getFlightByIndex(j).getFromTo() != ""){
+                    faltaDeVuelos = false;
                     cout << "Vuelo " << j+1 << endl;
                     cout << "Ruta: " << airlines[i].getFlightByIndex(j).getFromTo() << endl;
                     cout << "Hora: " << airlines[i].getFlightByIndex(j).getHour().getFormatoMilitar() << endl;
@@ -108,6 +121,12 @@ void Airport::printAllFilghts(){
                 }
             }
         }
+    }
+    if(faltaDeVuelos && faltaDeAerolinea){
+        cout << "No se programaron vuelos durante el dia" << endl;
+    }
+    else if(faltaDeVuelos || faltaDeAerolinea){
+        cout << "Se presento esta aerolinea, mas no programo vuelos" << endl;
     }
 }
 void Airport::closeOperations(){
@@ -123,7 +142,7 @@ void Airport::closeOperations(){
         totalDailyIncome = totalDailyIncome + airlines[i].getIncomes();
     }
     cout << "Durante el dia hubieron un total de: " << totalTransactions << " vuelos." << endl;
-    cout << "Generando un ingreso total a las aerlineas de: " << totalDailyIncome << endl;
+    cout << "Generando un ingreso total a las aerolineas de: " << totalDailyIncome << endl;
 }
 void Airport::nightSystem(){
     string respuestaHabitaciones;

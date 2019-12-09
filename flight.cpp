@@ -2,6 +2,7 @@
 #include "flight.h"
 using namespace std;
 
+//Constructor
 Flight::Flight(){
     date = "";
     price = 0;
@@ -13,6 +14,7 @@ Flight::Flight(){
 }
 
 //Metodos principales
+//Calcula la gasolina necesaria para llegar a un destino
 void Flight::calculateFuel(string tempDestination){
     float consumo;
     consumo = distance * 12;
@@ -29,6 +31,7 @@ void Flight::calculateFuel(string tempDestination){
     fuel = consumo;
     cout << "El combustible requerido para viajar a " << tempDestination << " es de: " << consumo << " galones." << endl;
 }
+//Asigna a un pasajero a un asiento con las coordenadas del asiento
 void Flight::setPassenger(int fila, int columna){
     fila = fila - 1;
     columna = columna - 1;
@@ -55,6 +58,8 @@ void Flight::setPassenger(int fila, int columna){
         cout << "Reservacion incorrecta: Espacio ocupado" << endl;
     }
 }
+
+//Verifica si un asiento esta libre
 bool Flight::seatIsFree(int fila, int columna){
     if(seats[fila][columna].getName() == ""){
         return true;

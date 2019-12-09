@@ -4,41 +4,42 @@
 #include <cstdlib>
 using namespace std;
 
+//Constructor
 Hora::Hora(){
     horas = -1;
     minutos = -1;
     formatoMilitar = "";
 }
 
+//Constructor con informacion inicial
 Hora::Hora(string tempFormatoMilitar){
     formatoMilitar = tempFormatoMilitar;
     ajustaHora();
 }
 
+//Getters
 int Hora::getHoras(){
     return horas;
 }
-
 int Hora::getMinutos(){
     return minutos;
 }
-
 string Hora::getFormatoMilitar(){
     return formatoMilitar;
 }
 
+//Setters
 void Hora::setHoras(int tempHoras){
     horas = tempHoras;
 }
-
 void Hora::setMinutos(int tempMinutos){
     minutos = tempMinutos;
 }
-
 void Hora::setFormatoMilitar(string tempFormatoMilitar){
     formatoMilitar = tempFormatoMilitar;
 }
 
+//Cambia el formato militar de la hora a minutos y horas numericos
 void Hora::ajustaHora(){
     string cadenaTemporal = "";
     if(string(1,formatoMilitar[1]) == ":" || string(1,formatoMilitar[2]) == ":"){
@@ -73,6 +74,7 @@ void Hora::ajustaHora(){
     }
 }
 
+//Verifica si la hora es adecuada para un vuelo
 bool Hora::horaAdecuada(){
     if(minutos != -1 && horas != -1){
         if(horas >= 23 || horas < 7){

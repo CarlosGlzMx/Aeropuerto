@@ -2,6 +2,7 @@
 #include "passnger.h"
 using namespace std;
 
+//Constructor
 Passenger::Passenger(){
     name = "";
     phone = "";

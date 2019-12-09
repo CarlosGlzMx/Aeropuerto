@@ -10,6 +10,7 @@ Airline::Airline(){
 }
 
 //Metodos principales
+//Cuenta los asientos libres en un vuelo elegido
 int Airline::countsSeats(Flight tempFlight){
     int freeSeats = 0;
     for(int i = 0; i < NUMBER_OF_ROWS; i++){
@@ -21,6 +22,7 @@ int Airline::countsSeats(Flight tempFlight){
     }
     return freeSeats;
 }
+//Imprime los asientos de un vuelo con asientos reservados y libres
 void Airline::printSeating(Flight tempFlight){
     cout << "0  1  2  3  4" << endl;
     for(int i = 0; i < NUMBER_OF_ROWS; i++){
@@ -41,12 +43,14 @@ void Airline::printSeating(Flight tempFlight){
         cout << "\n";
     }
 }
+//Actualiza los datos de la aerolinea en cuestion
 void Airline::updateAirline(){
     cout << "Ingresa el nombre completo de la aerolinea: " << endl;
     cin >> name;
     cout << "Ingresa el nombre acortado de la aerolinea: " << endl;
     cin >> shortName;
 }
+//Programa un vuelo y despues permite reservar pasajeros
 void Airline::scheduleFlight(){
     int posVueloDisponible = -1;
     for(int i = NUMBER_OF_FLIGHTS - 1; i >= 0; i--){
@@ -116,6 +120,7 @@ void Airline::scheduleFlight(){
         }
     }
 }
+//Muestra los ingresos de la aerolinea en cuestion
 void Airline::currentIncome(){
     incomes = 0;
     for(int i = 0; i < NUMBER_OF_FLIGHTS; i++){
@@ -123,10 +128,10 @@ void Airline::currentIncome(){
     }
     cout << "Las ganancias de la aerolinea son: " << incomes << endl;
 }
+//Cierra operaciones mostrando los ingresos del dia
 void Airline::closeOperation(){
     cout << "Cierre de operaciones, la ganancia de: " << name << " el dia de hoy fue: " << incomes;
 }
-
 
 //Getters
 string Airline::getBoardingCity(){

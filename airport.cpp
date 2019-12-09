@@ -3,6 +3,7 @@
 #include "airport.h"
 using namespace std;
 
+//Constructores
 Airport::Airport(){
     string fecha = "XX/XX/XXXX";
     startOperations(fecha);
@@ -17,6 +18,7 @@ Airport::Airport(string fecha){
 }
 
 //Metodos del menu
+//Inicia operaciones del aeropuerto
 void Airport::startOperations(string tempFecha){
     date = tempFecha;
     cout << "Ingresa el identificador del aeropuerto: ";
@@ -34,6 +36,7 @@ void Airport::startOperations(string tempFecha){
     }
     lineaFormato();
 }
+//Selecciona una aerolinea antes de pedirle programar un vuelo
 void Airport::programFlightFromAirline(){
     string airlineAnswer;
     int chosenAirline;
@@ -64,6 +67,7 @@ void Airport::programFlightFromAirline(){
     }
     airlines[chosenAirline].scheduleFlight();
 }
+//Muestra los ingresos de todas las aerolineas
 void Airport::showAllIncomes(){
     cout << "Los ingresos de las aerolineas el " << date << " han sido:" << endl;
     bool faltanAerolineas = true;
@@ -77,6 +81,7 @@ void Airport::showAllIncomes(){
         cout << "No se presentaron aerolineas" << endl;
     }
 }
+//Actualiza la informacion de una aerolinea
 void Airport::updateAnAirline(){
     int numAirline;
     cout << "Escoge el nombre de la aerolinea a actualizar" << endl;
@@ -97,6 +102,7 @@ void Airport::updateAnAirline(){
     airlines[numAirline].updateAirline();
     cout << "Actualizacion exitosa" << endl;
 }
+//Imprime para cada aerolinea todos los vuelos programados
 void Airport::printAllFilghts(){
     cout << "Los vuelos programados para: " << date << " son:" << endl;
     bool faltaDeVuelos = true;
@@ -129,6 +135,7 @@ void Airport::printAllFilghts(){
         cout << "Se presento esta aerolinea, mas no programo vuelos" << endl;
     }
 }
+//Termina el funcionamiento del aeropuerto para terminar el programa
 void Airport::closeOperations(){
     cout << "Sistema finalizado" << endl;
     totalTransactions = 0;
@@ -144,6 +151,7 @@ void Airport::closeOperations(){
     cout << "Durante el dia hubieron un total de: " << totalTransactions << " vuelos." << endl;
     cout << "Generando un ingreso total a las aerolineas de: " << totalDailyIncome << endl;
 }
+//Sistema de reservaciones
 void Airport::nightSystem(){
     string respuestaHabitaciones;
     cout << "Sistema de habitaciones del aeropuerto" << endl;
@@ -244,7 +252,7 @@ void Airport::setCountry(string tempCountry){
     country = tempCountry;
 }
 
-//Utileria
+//Imprime la linea de formato
 void Airport::lineaFormato(){
     cout << "----------------------------------" << endl;
 }

@@ -2,45 +2,22 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="hora.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="airline.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="561" topLine="5" />
 		</Cursor>
 	</File>
 	<File name="airline.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4036" topLine="53" />
+			<Cursor1 position="3030" topLine="68" />
 		</Cursor>
 		<Folding>
 			<Collapse line="4" />
-			<Collapse line="12" />
-			<Collapse line="23" />
-			<Collapse line="43" />
 		</Folding>
-	</File>
-	<File name="passnger.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
 	</File>
 	<File name="airport.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="850" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="flight.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1423" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1293" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="room.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="passnger.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -48,36 +25,63 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="flight.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3159" topLine="106" />
+		</Cursor>
+	</File>
 	<File name="room.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="120" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="airline.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="hora.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="561" topLine="5" />
+			<Cursor1 position="400" topLine="21" />
 		</Cursor>
 	</File>
-	<File name="airport.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="room.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3181" topLine="12" />
+			<Cursor1 position="433" topLine="7" />
 		</Cursor>
-		<Folding>
-			<Collapse line="5" />
-			<Collapse line="12" />
-			<Collapse line="19" />
-			<Collapse line="36" />
-			<Collapse line="66" />
-		</Folding>
+	</File>
+	<File name="hora.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1946" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="passnger.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="414" topLine="8" />
+		</Cursor>
 	</File>
 	<File name="flight.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="158" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="hora.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="airport.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1936" topLine="71" />
+			<Cursor1 position="6155" topLine="139" />
 		</Cursor>
+		<Folding>
+			<Collapse line="6" />
+			<Collapse line="13" />
+			<Collapse line="154" />
+			<Collapse line="224" />
+			<Collapse line="227" />
+			<Collapse line="230" />
+			<Collapse line="233" />
+			<Collapse line="236" />
+			<Collapse line="241" />
+			<Collapse line="244" />
+			<Collapse line="247" />
+			<Collapse line="250" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

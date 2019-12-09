@@ -1,3 +1,11 @@
+/*
+Programa que simula el funcionamiento de un dia de un aeropuerto con 3 aerolineas,
+cada una con un máximo de 5 vuelos. Restringe los vuelos por horarios y permite
+reservar habitaciones para dormir ahi, con un maximo posible de 10 habitaciones.
+Autor: Carlos Gonzalez del Rosal
+Fecha: 7 de diciembre de 2019
+*/
+
 #include <iostream>
 #include "airline.h"
 #include "airport.h"
